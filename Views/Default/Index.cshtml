@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "";
+}
+@{
+    string area = "";
+    string url = HttpContext.Current.Request.RawUrl.Replace("http://", "").Replace("https://", "");
+    bool hasSlug = (url.IndexOf("/") < url.Length);
+    if (hasSlug)
+    {
+        if (url.Substring(url.Length - 1, 1) != "/")
+        {
+            if(url.IndexOf("/") + 2 < url.Length)
+            {
+                //area = url.Substring(url.IndexOf("/") + 1, (url.Length - url.IndexOf("/")+1));
+            }
+        }
+    }
+}
+@RenderPage("~/Areas/Header/Views/Index.cshtml")
+@if (!string.IsNullOrEmpty(area))
+{
+    RenderPage("~/Areas/" + area + "/Views/Index.cshtml");
+}
