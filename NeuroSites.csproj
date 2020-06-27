@@ -192,6 +192,7 @@
     <Content Include="App_Data\fonts\Pixeboy-z8XGD.ttf" />
     <Content Include="Areas\Merch\Views\Index.cshtml" />
     <Content Include="Areas\Merch\Views\web.config" />
+    <Content Include="Content\PageTemplates\merch.json" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
