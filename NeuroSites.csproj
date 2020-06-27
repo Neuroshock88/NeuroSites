@@ -127,6 +127,8 @@
     <Compile Include="Areas\Footer\PropertiesModel.cs" />
     <Compile Include="Areas\Header\Default.cs" />
     <Compile Include="Areas\Header\PropertiesModel.cs" />
+    <Compile Include="Areas\Merchandise\Default.cs" />
+    <Compile Include="Areas\Merchandise\PropertiesModel.cs" />
     <Compile Include="Areas\Merch\Default.cs" />
     <Compile Include="Areas\Merch\PropertiesModel.cs" />
     <Compile Include="Areas\YouTube\Default.cs" />
@@ -144,6 +146,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\js\general.js" />
     <Content Include="Content\Images\img\youtube bannerV3.png" />
     <Content Include="Content\Images\Logos\4k icon.png" />
     <Content Include="Content\Site.css" />
@@ -165,11 +168,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\js\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Footer\Views\Shared\" />
     <Folder Include="Areas\Header\Views\Shared\" />
     <Folder Include="Areas\Masthead\Views\Shared\" />
+    <Folder Include="Areas\Merchandise\Views\Shared\" />
     <Folder Include="Areas\YouTube\Views\Shared\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
@@ -193,6 +196,8 @@
     <Content Include="Areas\Merch\Views\Index.cshtml" />
     <Content Include="Areas\Merch\Views\web.config" />
     <Content Include="Content\PageTemplates\merch.json" />
+    <Content Include="Areas\Merchandise\Views\Index.cshtml" />
+    <Content Include="Areas\Merchandise\Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
