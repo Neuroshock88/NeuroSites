@@ -2,23 +2,46 @@
 @{
     ViewBag.Title = "";
 }
-@{
+@{    
     string area = "";
-    string url = HttpContext.Current.Request.RawUrl.Replace("http://", "").Replace("https://", "");
-    bool hasSlug = (url.IndexOf("/") < url.Length);
-    if (hasSlug)
+    string url = HttpContext.Current.Request.RawUrl.Replace("http://", "").Replace("https://", "").Replace("Default/Index", "");
+    
+    bool hasSlug = (url.IndexOf("/") < url.Length && url != "/" && (url.Contains("#") == false)) ;
+    string json = "";
+    if (hasSlug == false)
     {
+        //load the home page template
+        json = new StreamReader(Server.MapPath("/Content/PageTemplates/home.json")).ReadToEnd();
+    }
+    else
+    {
+        //load the back page template
         if (url.Substring(url.Length - 1, 1) != "/")
         {
-            if(url.IndexOf("/") + 2 < url.Length)
+            if (url.IndexOf("/") + 2 < url.Length)
             {
-                //area = url.Substring(url.IndexOf("/") + 1, (url.Length - url.IndexOf("/")+1));
+                area = url.Replace("/", "");
+                if (!string.IsNullOrEmpty(area))
+                {
+                    json = new StreamReader(Server.MapPath("/Content/PageTemplates/" + area + ".json")).ReadToEnd();
+                }
             }
         }
     }
-}
-@RenderPage("~/Areas/Header/Views/Index.cshtml")
-@if (!string.IsNullOrEmpty(area))
-{
-    RenderPage("~/Areas/" + area + "/Views/Index.cshtml");
+    if (!string.IsNullOrEmpty(json))
+    {
+        Dictionary<string, List<string>> modulesList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(json);
+        List<String> modules = new List<string>();
+        modulesList.TryGetValue("Modules", out modules);
+        if(modulesList != null)
+        {
+            if(modulesList.Count > 0)
+            {
+                foreach(string mod in modules)
+                {
+                    @RenderPage("~/Areas/" + mod + "/Views/Index.cshtml");
+                }
+            }
+        }
+    }
 }

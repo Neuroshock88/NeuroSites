@@ -13,10 +13,11 @@ namespace NeuroSites
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
             routes.MapRoute(
-                name: "Default",
-                url: "/",
-                defaults: new { controller = "Default", action = "{action}", id = UrlParameter.Optional }
+                "Default",                                              // Route name
+                "{*permalink}",                           // URL with parameters
+                new { controller = "Default", action = "Index", id = "" }  // Parameter defaults
             );
         }
     }

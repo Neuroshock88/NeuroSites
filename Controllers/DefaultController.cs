@@ -8,10 +8,8 @@ namespace NeuroSites.Controllers
 {
     public class DefaultController : Controller
     {
-        public ActionResult Index()
-        {
+        public ActionResult Index() {
             return View();
         }
-
     }
 }

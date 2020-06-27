@@ -127,17 +127,25 @@
     <Compile Include="Areas\Footer\PropertiesModel.cs" />
     <Compile Include="Areas\Header\Default.cs" />
     <Compile Include="Areas\Header\PropertiesModel.cs" />
+    <Compile Include="Areas\YouTube\Default.cs" />
+    <Compile Include="Areas\YouTube\PropertiesModel.cs" />
+    <Compile Include="Areas\Masthead\Default.cs" />
+    <Compile Include="Areas\Masthead\PropertiesModel.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\PageModel.cs" />
     <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Models\CompanyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\img\youtube bannerV3.png" />
+    <Content Include="Content\Images\Logos\4k icon.png" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Videos\shiny ninjask trim.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="App_Data\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -159,6 +167,8 @@
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Footer\Views\Shared\" />
     <Folder Include="Areas\Header\Views\Shared\" />
+    <Folder Include="Areas\Masthead\Views\Shared\" />
+    <Folder Include="Areas\YouTube\Views\Shared\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +182,12 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Footer\Views\Index.cshtml" />
     <Content Include="Areas\Footer\Views\web.config" />
+    <Content Include="Areas\Masthead\Views\web.config" />
+    <Content Include="Areas\Masthead\Views\Index.cshtml" />
+    <Content Include="Content\PageTemplates\home.json" />
+    <Content Include="Areas\YouTube\Views\Index.cshtml" />
+    <Content Include="Areas\YouTube\Views\web.config" />
+    <Content Include="App_Data\fonts\Pixeboy-z8XGD.ttf" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />

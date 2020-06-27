@@ -1,0 +1,7 @@
+{
+  "Modules": [
+    "Header",
+    "Masthead",
+    "Footer"
+  ]
+}
