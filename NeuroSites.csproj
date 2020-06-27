@@ -127,6 +127,8 @@
     <Compile Include="Areas\Footer\PropertiesModel.cs" />
     <Compile Include="Areas\Header\Default.cs" />
     <Compile Include="Areas\Header\PropertiesModel.cs" />
+    <Compile Include="Areas\Merch\Default.cs" />
+    <Compile Include="Areas\Merch\PropertiesModel.cs" />
     <Compile Include="Areas\YouTube\Default.cs" />
     <Compile Include="Areas\YouTube\PropertiesModel.cs" />
     <Compile Include="Areas\Masthead\Default.cs" />
@@ -188,6 +190,8 @@
     <Content Include="Areas\YouTube\Views\Index.cshtml" />
     <Content Include="Areas\YouTube\Views\web.config" />
     <Content Include="App_Data\fonts\Pixeboy-z8XGD.ttf" />
+    <Content Include="Areas\Merch\Views\Index.cshtml" />
+    <Content Include="Areas\Merch\Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />

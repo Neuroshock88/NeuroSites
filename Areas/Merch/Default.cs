@@ -8,7 +8,9 @@ namespace NeuroSites.Areas.Merch
     public class Default
     {
         public PropertiesModel Properties = new PropertiesModel();
-
+        Default() {
+            SetSettings();
+        }
         private void SetSettings() {
             Properties.MerchURL = "https://merch.streamelements.com/neuroshock88";
         }

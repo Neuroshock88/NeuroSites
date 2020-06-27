@@ -3,6 +3,7 @@
 /*BODY*/
 body {
     margin: 0;
+    background-color: #4e0487;
 }
 
 /*HEADER*/
@@ -50,7 +51,7 @@ body {
     float: left;
     padding: 1rem 3rem;
 }
-.header__nav-list > li > a{
+.header__nav-list > li > a, .footer__branding{
     float: left;
     color: #51048c;
     text-decoration: none;
@@ -65,6 +66,7 @@ body {
     max-width: 100vw;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .masthead__image-full {
@@ -72,7 +74,28 @@ body {
     height: 100%;
     object-fit: cover;
 }
+.footer {
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient( transparent, rgba(66, 245, 161,.3), rgba(66, 245, 239, .5));
+    position: relative;
+}
 
+.footer__container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer__branding {
+    padding: 1rem 3rem, 0rem, 3rem;
+    color: rgba(66, 245, 239, 1);
+    font-size: .75em;
+}
 /*YOUTUBE*/
 
 /*TWITCH*/
