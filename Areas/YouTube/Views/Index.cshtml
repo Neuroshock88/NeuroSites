@@ -1,5 +1,15 @@
 ﻿@model NeuroSites.Areas.Youtube.Default
 
-<div class="youtube">
-    <video src="~/Content/Videos/shiny ninjask trim.mp4" autoplay muted loop></video>
+<div class="youtube" id="youtube">
+    <div class="youtube__text-container">
+        <div class="youtube__text-content">
+            <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">
+                <img src="~/Content/Images/Logos/elegant-youtube-logo-12.png" class="youtube__logo">
+            </a>
+            <p >Check out more great clips like this on my <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">YouTube Channel</a></p>
+        </div>
+    </div>
+    <div class="youtube__video-container">
+        <video class="youtube__video" src="~/Content/Videos/shiny ninjask trim.mp4" autoplay muted loop controls></video>
+    </div>
 </div>

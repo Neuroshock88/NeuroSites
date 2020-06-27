@@ -2,6 +2,7 @@
   "Modules": [
     "Header",
     "Masthead",
+    "YouTube",
     "Footer"
   ]
 }

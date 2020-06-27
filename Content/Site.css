@@ -1,4 +1,11 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+/*that freaking owl*/
+* + * {
+    margin-top: 1.5rem;
+}
 
 /*BODY*/
 body {
@@ -13,6 +20,7 @@ body {
     height: 10rem;
     max-height: 125px;
     background: linear-gradient(rgba(66, 245, 239, .5), rgba(66, 245, 161,.3), transparent);
+    margin-top: 0;
 }
 
 .header__logo-container {
@@ -36,6 +44,7 @@ body {
     right: 10px;
     transform: translateY(-75%);
     width: 70%;
+    margin-top: 0;
 }
 
 .header__nav-list {
@@ -50,14 +59,16 @@ body {
 .header__nav-list > li {
     float: left;
     padding: 1rem 3rem;
+    margin-top: 0;
 }
-.header__nav-list > li > a, .footer__branding{
+.header__nav-list > li > a, .footer__branding {
     float: left;
     color: #51048c;
     text-decoration: none;
     font-size: 1em;
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
+    margin-top: 0;
 }
 
 /*MASTHEAD*/
@@ -67,6 +78,7 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    margin-top: 0;
 }
 
 .masthead__image-full {
@@ -74,6 +86,50 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+/*YOUTUBE*/
+.youtube {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+}
+.youtube__logo{
+    max-width: 50%;
+}
+.youtube__text-container {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin-right: auto;
+    margin-left: .95rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+.youtube__text-content {
+    color: rgba(66, 245, 239, 1);
+}
+.youtube__text-content a {
+    text-decoration: none;
+    color: rgba(66, 245, 161,1);
+}
+.youtube__video-container {
+    order: 2;
+    max-width: 50%;
+    right: 1.5rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+}
+.youtube__video {
+    max-width: 100%;
+}
+/*TWITCH*/
+
+/*FOOTER*/
+
 .footer {
     width: 100%;
     height: 10rem;
@@ -88,16 +144,12 @@ body {
     flex-direction: column;
     position: absolute;
     margin: auto;
-    top: 50%;
+    top: 70%;
     transform: translateY(-50%);
 }
+
 .footer__branding {
     padding: 1rem 3rem, 0rem, 3rem;
     color: rgba(66, 245, 239, 1);
     font-size: .75em;
 }
-/*YOUTUBE*/
-
-/*TWITCH*/
-
-/*FOOTER*/
