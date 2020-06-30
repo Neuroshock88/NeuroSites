@@ -111,6 +111,7 @@ body {
 }
 .youtube__text-content {
     color: rgba(66, 245, 239, 1);
+    padding: 0 5rem;
 }
 .youtube__text-content a {
     text-decoration: none;
@@ -127,6 +128,51 @@ body {
     max-width: 100%;
 }
 /*TWITCH*/
+.twitch {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.twitch__logo {
+    max-width: 50%;
+}
+
+.twitch__text-container {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    margin-right: auto;
+    margin-left: .95rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.twitch__text-content {
+    color: rgba(66, 245, 239, 1);
+    padding: 0 5rem;
+}
+
+.twitch__text-content a {
+    text-decoration: none;
+    color: rgba(66, 245, 161,1);
+}
+
+.twicth__iframe-container {
+    order: 2;
+    max-width: 60%;
+    right: 1.5rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+}
+
+.twitch__frame {
+    max-width: 100%;
+}
 
 /*FOOTER*/
 

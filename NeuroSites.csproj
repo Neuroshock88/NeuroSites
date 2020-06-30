@@ -129,6 +129,8 @@
     <Compile Include="Areas\Merchandise\PropertiesModel.cs" />
     <Compile Include="Areas\Merch\Default.cs" />
     <Compile Include="Areas\Merch\PropertiesModel.cs" />
+    <Compile Include="Areas\Twitch\Default.cs" />
+    <Compile Include="Areas\Twitch\PropertiesModel.cs" />
     <Compile Include="Areas\YouTube\Default.cs" />
     <Compile Include="Areas\YouTube\PropertiesModel.cs" />
     <Compile Include="Areas\Masthead\Default.cs" />
@@ -174,6 +176,7 @@
     <Folder Include="Areas\Header\Views\Shared\" />
     <Folder Include="Areas\Masthead\Views\Shared\" />
     <Folder Include="Areas\Merchandise\Views\Shared\" />
+    <Folder Include="Areas\Twitch\Views\Shared\" />
     <Folder Include="Areas\YouTube\Views\Shared\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
@@ -199,6 +202,8 @@
     <Content Include="Content\PageTemplates\merch.json" />
     <Content Include="Areas\Merchandise\Views\Index.cshtml" />
     <Content Include="Areas\Merchandise\Views\web.config" />
+    <Content Include="Areas\Twitch\Views\web.config" />
+    <Content Include="Areas\Twitch\Views\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
