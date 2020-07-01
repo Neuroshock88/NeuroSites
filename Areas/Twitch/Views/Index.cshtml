@@ -1,23 +1,29 @@
 ﻿@model NeuroSites.Areas.Twitch.Default
+@{
+    string test = "";
+}
+@if (Model != null)
+{
+    <div class="twitch" id="twitch">
+        <div class="twicth__text-container">
+            <div class="twicth__text-content">
+                <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">
+                    <img src="~/Content/Images/Logos/elegant-youtube-logo-12.png" class="youtube__logo">
+                </a>
+                <p>Check out more great clips like this on my <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">YouTube Channel</a></p>
+            </div>
+        </div>
+        <div class="twicth__iframe-container">
+            <iframe src="@Model.Properties.TwitchURL" frameborder="0" class="twitch__frame"></iframe>
+        </div>
+        <div class="twicth__text-container">
+            <div class="twicth__text-content">
+                <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">
+                    <img src="~/Content/Images/Logos/elegant-youtube-logo-12.png" class="youtube__logo">
+                </a>
+                <p>Check out more great clips like this on my <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">YouTube Channel</a></p>
+            </div>
+        </div>
+    </div>
 
-<div class="twitch" id="twitch">
-    <div class="twicth__text-container">
-        <div class="twicth__text-content">
-            <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">
-                <img src="~/Content/Images/Logos/elegant-youtube-logo-12.png" class="youtube__logo">
-            </a>
-            <p>Check out more great clips like this on my <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">YouTube Channel</a></p>
-        </div>
-    </div>
-    <div class="twicth__iframe-container">
-        <iframe src="@Model.Properties.TwitchURL" frameborder="0" class="twitch__frame"></iframe>
-    </div>
-    <div class="twicth__text-container">
-        <div class="twicth__text-content">
-            <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">
-                <img src="~/Content/Images/Logos/elegant-youtube-logo-12.png" class="youtube__logo">
-            </a>
-            <p>Check out more great clips like this on my <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">YouTube Channel</a></p>
-        </div>
-    </div>
-</div>
+}

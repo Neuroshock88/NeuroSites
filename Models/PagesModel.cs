@@ -1,18 +1,19 @@
-﻿using System;
+﻿using Microsoft.Ajax.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace NeuroSites.Models
 {
-    public class PageModel
+    public static class PagesModel
     {
-        PageModel() {
-            Modules = new List<string>();
-        }
+
         /// <summary>
         /// This is the name of the module (Areas Folder)
         /// </summary>
-        public List<string> Modules { get; set; }
+        public static List<string> Modules;
+        public static List<dynamic> Models;
+
     }
 }

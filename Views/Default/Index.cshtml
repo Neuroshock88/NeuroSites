@@ -1,47 +1,16 @@
-﻿
-@{
+﻿@model NeuroSites.Areas.Generic.Default
+@{ 
     ViewBag.Title = "";
-}
-@{    
-    string area = "";
-    string url = HttpContext.Current.Request.RawUrl.Replace("http://", "").Replace("https://", "").Replace("Default/Index", "");
-    
-    bool hasSlug = (url.IndexOf("/") < url.Length && url != "/" && (url.Contains("#") == false)) ;
-    string json = "";
-    if (hasSlug == false)
+
+    for(int i = 0; i < NeuroSites.Models.PagesModel.Modules.Count; i++)
     {
-        //load the home page template
-        json = new StreamReader(Server.MapPath("/Content/PageTemplates/home.json")).ReadToEnd();
+        dynamic modeler = new NeuroSites.Areas.Generic.Default();
+        modeler.Properties.ViewFile = NeuroSites.Models.PagesModel.Modules[i];
+        modeler.Properties.CodeFile = "NeuroSites.Areas." + NeuroSites.Models.PagesModel.Modules[i].Replace("~/Areas/", "").Replace("/Views/Index.cshtml", "") + ".Default";
+        modeler.BindFiles();
+        dynamic models = modeler.Properties.CodeFile.Unwrap();
+        System.Type newType = models.GetType();
+        dynamic newModel = Convert.ChangeType(models, newType);
+        @RenderPage(modeler.Properties.ViewFile, newModel);
     }
-    else
-    {
-        //load the back page template
-        if (url.Substring(url.Length - 1, 1) != "/")
-        {
-            if (url.IndexOf("/") + 2 < url.Length)
-            {
-                area = url.Replace("/", "");
-                if (!string.IsNullOrEmpty(area))
-                {
-                    json = new StreamReader(Server.MapPath("/Content/PageTemplates/" + area + ".json")).ReadToEnd();
-                }
-            }
-        }
-    }
-    if (!string.IsNullOrEmpty(json))
-    {
-        Dictionary<string, List<string>> modulesList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(json);
-        List<String> modules = new List<string>();
-        modulesList.TryGetValue("Modules", out modules);
-        if(modulesList != null)
-        {
-            if(modulesList.Count > 0)
-            {
-                foreach(string mod in modules)
-                {
-                    @RenderPage("~/Areas/" + mod + "/Views/Index.cshtml");
-                }
-            }
-        }
-    }
-}
+}e

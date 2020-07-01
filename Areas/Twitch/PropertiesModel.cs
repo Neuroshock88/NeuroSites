@@ -8,7 +8,9 @@ namespace NeuroSites.Areas.Twitch
     public class PropertiesModel
     {
         /// <summary>
-
+        public PropertiesModel() {
+            TwitchURL = "";
+        }
         /// <summary>
         /// sets the Merch website URL
         /// </summary>

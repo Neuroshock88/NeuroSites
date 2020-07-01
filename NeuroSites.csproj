@@ -121,16 +121,18 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\Default.cs" />
     <Compile Include="Areas\Admin\PropertiesModel.cs" />
+    <Compile Include="Areas\Generic\Default.cs" />
+    <Compile Include="Areas\Generic\PropertiesModel.cs" />
     <Compile Include="Areas\Footer\Default.cs" />
     <Compile Include="Areas\Footer\PropertiesModel.cs" />
+    <Compile Include="Areas\Twitch\Default.cs" />
+    <Compile Include="Areas\Twitch\PropertiesModel.cs" />
     <Compile Include="Areas\Header\Default.cs" />
     <Compile Include="Areas\Header\PropertiesModel.cs" />
     <Compile Include="Areas\Merchandise\Default.cs" />
     <Compile Include="Areas\Merchandise\PropertiesModel.cs" />
     <Compile Include="Areas\Merch\Default.cs" />
     <Compile Include="Areas\Merch\PropertiesModel.cs" />
-    <Compile Include="Areas\Twitch\Default.cs" />
-    <Compile Include="Areas\Twitch\PropertiesModel.cs" />
     <Compile Include="Areas\YouTube\Default.cs" />
     <Compile Include="Areas\YouTube\PropertiesModel.cs" />
     <Compile Include="Areas\Masthead\Default.cs" />
@@ -140,7 +142,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\PageModel.cs" />
+    <Compile Include="Models\PagesModel.cs" />
     <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Models\CompanyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -173,6 +175,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Footer\Views\Shared\" />
+    <Folder Include="Areas\Generic\Views\Shared\" />
     <Folder Include="Areas\Header\Views\Shared\" />
     <Folder Include="Areas\Masthead\Views\Shared\" />
     <Folder Include="Areas\Merchandise\Views\Shared\" />
@@ -202,11 +205,16 @@
     <Content Include="Content\PageTemplates\merch.json" />
     <Content Include="Areas\Merchandise\Views\Index.cshtml" />
     <Content Include="Areas\Merchandise\Views\web.config" />
-    <Content Include="Areas\Twitch\Views\web.config" />
     <Content Include="Areas\Twitch\Views\Index.cshtml" />
+    <Content Include="Areas\Twitch\Views\web.config" />
+    <Content Include="Areas\Generic\Views\Index.cshtml" />
+    <Content Include="Areas\Generic\Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

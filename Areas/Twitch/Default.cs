@@ -5,15 +5,15 @@ using System.Web;
 
 namespace NeuroSites.Areas.Twitch
 {
-    public class Default
-    {
-        public PropertiesModel Properties = new PropertiesModel();
-        Default()
+    public class Default {
+        public PropertiesModel Properties;
+        public Default()
         {
             SetSettings();
         }
         private void SetSettings()
         {
+            Properties = new PropertiesModel();
             Properties.TwitchURL = "https://www.twitch.tv/neuroshock88";
         }
     }
