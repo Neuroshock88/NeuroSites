@@ -1,5 +1,4 @@
-﻿@model NeuroSites.Areas.Generic.Default
-@{ 
+﻿@{ 
     ViewBag.Title = "";
 
     for(int i = 0; i < NeuroSites.Models.PagesModel.Modules.Count; i++)
@@ -11,6 +10,7 @@
         dynamic models = modeler.Properties.CodeFile.Unwrap();
         System.Type newType = models.GetType();
         dynamic newModel = Convert.ChangeType(models, newType);
+        NeuroSites.Models.PagesModel.ActiveModel = newModel;
         @RenderPage(modeler.Properties.ViewFile, newModel);
     }
-}e
+}

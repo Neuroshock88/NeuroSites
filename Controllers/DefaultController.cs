@@ -38,7 +38,10 @@ namespace NeuroSites.Controllers
                         area = url.Replace("/", "");
                         if (!string.IsNullOrEmpty(area))
                         {
-                            json = new StreamReader(Server.MapPath("/Content/PageTemplates/" + area + ".json")).ReadToEnd();
+                            if(System.IO.File.Exists(Server.MapPath("/Content/PageTemplates/" + area + ".json")))
+                            {
+                                json = new StreamReader(Server.MapPath("/Content/PageTemplates/" + area + ".json")).ReadToEnd();
+                            }
                         }
                     }
                 }

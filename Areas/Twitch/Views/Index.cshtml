@@ -1,8 +1,9 @@
 ﻿@model NeuroSites.Areas.Twitch.Default
 @{
     string test = "";
+    NeuroSites.Areas.Twitch.Default NewModel = NeuroSites.Models.PagesModel.ActiveModel;
 }
-@if (Model != null)
+@if (NewModel != null)
 {
     <div class="twitch" id="twitch">
         <div class="twicth__text-container">
@@ -14,7 +15,7 @@
             </div>
         </div>
         <div class="twicth__iframe-container">
-            <iframe src="@Model.Properties.TwitchURL" frameborder="0" class="twitch__frame"></iframe>
+            <iframe src="@NewModel.Properties.TwitchURL" frameborder="0" class="twitch__frame"></iframe>
         </div>
         <div class="twicth__text-container">
             <div class="twicth__text-content">

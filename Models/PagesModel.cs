@@ -14,6 +14,6 @@ namespace NeuroSites.Models
         /// </summary>
         public static List<string> Modules;
         public static List<dynamic> Models;
-
+        public static dynamic ActiveModel;
     }
 }
