@@ -1,24 +1,32 @@
 ﻿@model NeuroSites.Areas.Twitch.Default
 @{
-    string test = "";
     NeuroSites.Areas.Twitch.Default NewModel = NeuroSites.Models.PagesModel.ActiveModel;
 }
 @if (NewModel != null)
 {
     <div class="twitch" id="twitch">
-        <div class="twicth__text-container">
-            <div class="twicth__text-content">
+        <div class="twitch__text-container" style="order: 1;">
+            <div class="twitch__text-content">
                 <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">
                     <img src="~/Content/Images/Logos/elegant-youtube-logo-12.png" class="youtube__logo">
                 </a>
                 <p>Check out more great clips like this on my <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">YouTube Channel</a></p>
             </div>
         </div>
-        <div class="twicth__iframe-container">
-            <iframe src="@NewModel.Properties.TwitchURL" frameborder="0" class="twitch__frame"></iframe>
+        <div class="twitch__iframe-container">
+            <!-- Add a placeholder for the Twitch embed -->
+            <div id="twitch-embed"></div>
+            <!-- Load the Twitch embed script -->
+            <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+            <!-- Create a Twitch.Player object. This will render within the placeholder div -->
+            <script type="text/javascript">
+              new Twitch.Player("twitch-embed", {
+                channel: "neuroshock88"
+              });
+            </script>
         </div>
-        <div class="twicth__text-container">
-            <div class="twicth__text-content">
+        <div class="twitch__text-container"style="order: 3;">
+            <div class="twitch__text-content">
                 <a href="https://www.youtube.com/channel/UCUUtcYXyREvYElAQDB2Dp5Q">
                     <img src="~/Content/Images/Logos/elegant-youtube-logo-12.png" class="youtube__logo">
                 </a>

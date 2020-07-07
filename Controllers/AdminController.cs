@@ -20,7 +20,7 @@ namespace NeuroSites.Controllers
         {
             App_Start.Common cmn = new App_Start.Common();
 
-            DataSet loginData = cmn.ExecuteQueryWithResults("EXEC CheckLogin " + )
+            //DataSet loginData = cmn.ExecuteQueryWithResults("EXEC CheckLogin " + )
             return View();
         }
     }
