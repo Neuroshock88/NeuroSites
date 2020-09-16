@@ -121,10 +121,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\Default.cs" />
     <Compile Include="Areas\Admin\PropertiesModel.cs" />
+    <Compile Include="Areas\Affiliation\Default.cs" />
+    <Compile Include="Areas\Affiliation\PropertiesModel.cs" />
     <Compile Include="Areas\Generic\Default.cs" />
     <Compile Include="Areas\Generic\PropertiesModel.cs" />
     <Compile Include="Areas\Footer\Default.cs" />
     <Compile Include="Areas\Footer\PropertiesModel.cs" />
+    <Compile Include="Areas\Discord\Default.cs" />
+    <Compile Include="Areas\Discord\PropertiesModel.cs" />
     <Compile Include="Areas\Twitch\Default.cs" />
     <Compile Include="Areas\Twitch\PropertiesModel.cs" />
     <Compile Include="Areas\Header\Default.cs" />
@@ -149,14 +153,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\Logos\discord.png" />
+    <Content Include="Content\Images\img\Neuroshock88 Youtube Banner v3 1440p v2.jpg" />
     <Content Include="Content\Images\Logos\elegant-youtube-logo-12.png" />
+    <Content Include="Content\Images\Logos\Facebook_Logo_%282019%29.png" />
+    <Content Include="Content\Images\Logos\Neuroshock Logo v4 - no background 8-2020.png" />
+    <Content Include="Content\Images\Logos\Neuroshock Logo v4 8-2020 4k .png" />
+    <Content Include="Content\Images\Logos\pics-photos-instagram-logo-png-4.png" />
+    <Content Include="Content\Images\Logos\Redragon-Logo-PNG-Red.png" />
+    <Content Include="Content\Images\Logos\twitch_PNG48.png" />
+    <Content Include="Content\Images\Logos\twitter-logo-2-1.png" />
     <Content Include="Content\Images\Logos\twitter-logo.png" />
     <Content Include="Content\Images\Logos\youtube_64dp.png" />
     <Content Include="Content\js\general.js" />
     <Content Include="Content\Images\img\youtube bannerV3.png" />
     <Content Include="Content\Images\Logos\4k icon.png" />
+    <Content Include="Content\PageTemplates\home.json" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\Videos\shiny ninjask trim.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="App_Data\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -175,6 +188,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Affiliation\Views\Shared\" />
+    <Folder Include="Areas\Discord\Views\Shared\" />
     <Folder Include="Areas\Footer\Views\Shared\" />
     <Folder Include="Areas\Generic\Views\Shared\" />
     <Folder Include="Areas\Header\Views\Shared\" />
@@ -182,6 +197,7 @@
     <Folder Include="Areas\Merchandise\Views\Shared\" />
     <Folder Include="Areas\Twitch\Views\Shared\" />
     <Folder Include="Areas\YouTube\Views\Shared\" />
+    <Folder Include="Content\Videos\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
@@ -197,7 +213,6 @@
     <Content Include="Areas\Footer\Views\web.config" />
     <Content Include="Areas\Masthead\Views\web.config" />
     <Content Include="Areas\Masthead\Views\Index.cshtml" />
-    <Content Include="Content\PageTemplates\home.json" />
     <Content Include="Areas\YouTube\Views\Index.cshtml" />
     <Content Include="Areas\YouTube\Views\web.config" />
     <Content Include="App_Data\fonts\Pixeboy-z8XGD.ttf" />
@@ -210,9 +225,15 @@
     <Content Include="Areas\Twitch\Views\web.config" />
     <Content Include="Areas\Generic\Views\Index.cshtml" />
     <Content Include="Areas\Generic\Views\web.config" />
+    <Content Include="Areas\Discord\Views\Index.cshtml" />
+    <Content Include="Areas\Discord\Views\web.config" />
+    <Content Include="Areas\Affiliation\Views\Index.cshtml" />
+    <Content Include="Areas\Affiliation\Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

@@ -1,0 +1,17 @@
+﻿@model NeuroSites.Areas.Discord.Default
+@{
+    NeuroSites.Areas.Discord.Default NewModel = NeuroSites.Models.PagesModel.ActiveModel;
+}
+@if (NewModel != null)
+{
+    <div class="discord" id="discord">
+        <div class="discord__logo">
+            <a href="https://discord.gg/BSBGEAS" target="_blank"><img src="~/Content/Images/Logos/discord.png" /></a>
+        </div>
+        <div class="discord__text-content">
+            <a href="https://discord.gg/kucbPAg" target="_blank">Join Neuroshock88's official Discord Server!!!</a>
+            <iframe src="https://discordapp.com/widget?id=701928525388578836&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+    </div>
+
+}

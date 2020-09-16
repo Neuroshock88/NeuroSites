@@ -3,16 +3,41 @@
 <div class="header">
     <div class="header__logo-container">
         <div class="header__logo-container">
-            <img class="header__logo-small" src="~/Content/Images/Logos/4k icon.png" />
+            <img class="header__logo-small" src="~/Content/Images/Logos/Neuroshock Logo v4 8-2020 4k .png" />
         </div>
         <div class="header__navigation-container">
             <ul class="header__nav-list">
                 <li><a href="#youtube">Youtube</a></li>
                 <li><a href="#twitch">Twitch</a></li>
                 <li><a href="#discord">Discord</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="/merch">Merch</a></li>
+                <li><a href="#affiliation">Affiliation</a></li>
+                <li><a href="https://merch.streamelements.com/neuroshock88" target="_blank">Merch</a></li>
             </ul>
+            <div class="header__mobile-button-container">
+                <div class="container" onclick="ToggleHeaderButtonState(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+
+<div class="header__mobile-nav-list-container">
+    <ul class="header__nav-list">
+        <li><div data-link="#youtube" onclick="Navigate(this)">Youtube</div></li>
+        <li><div data-link="#twitch" onclick="Navigate(this)">Twitch</div></li>
+        <li><div data-link="#discord" onclick="Navigate(this)">Discord</div></li>
+        <li><div data-link="#affiliation" onclick="Navigate(this)">Affiliation</div></li>
+        <li><a href="https://merch.streamelements.com/neuroshock88" target="_blank">Merch</a></li>
+    </ul>
+    <div class="header__social-list-container">
+        <p style="text-align:center;">Follow me on Social Media!</p>
+        <ul class="header__social-list">
+            <li><a href="https://www.instagram.com/neuroshock88" target="_blank"><img src="~/Content/Images/Logos/pics-photos-instagram-logo-png-4.png" /></a></li>
+            <li><a href="https://www.twitter.com/neuroshock_88" target="_blank"><img src="~/Content/Images/Logos/twitter-logo-2-1.png" /></a></li>
+            <li><a href="https://www.facebook.com/neuroshock88" target="_blank"><img src="~/Content/Images/Logos/Facebook_Logo_(2019).png" /></a></li>
+        </ul>
     </div>
 </div>
