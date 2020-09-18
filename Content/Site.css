@@ -44,12 +44,12 @@ body {
     top: 50%;
     right: 10px;
     transform: translateY(-85%);
-    width: 70%;
+    width: 100%;
     margin-top: 0;
 }
 
 .header__nav-list {
-    max-width:80%;
+    max-width:100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -74,7 +74,7 @@ body {
 .header__mobile-button-container, .header__mobile-nav-list-container {
     display: none;
 }
-@media(max-width: 1000px) {
+@media(max-width: 1200px) {
     .header__mobile-button-container {
         display: block;
         position: absolute;
@@ -113,8 +113,8 @@ body {
     }
     .header__mobile-nav-list-container {
         display: block;
-        height: 102%;
-        width: 102%;
+        height: 100%;
+        width: 100%;
         opacity: 0;
         transition: opacity .15s ease-in;
         background: rgba(66, 245, 161,1);
@@ -208,6 +208,7 @@ body {
     flex-direction: row;
     position: relative;
     font-family: 'Press Start 2P', cursive;
+    height: 100vh;
 }
 .youtube__logo{
     max-width: 50%;
@@ -218,7 +219,7 @@ body {
     flex-direction: column;
     max-width: 50%;
     margin-right: auto;
-    margin-left: .95rem;
+    /*margin-left: .95rem;*/
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
@@ -237,6 +238,8 @@ body {
     right: 1.5rem;
     margin-left: auto;
     margin-right: 1.5rem;
+    position: relative;
+    padding-bottom: 56.25%;
 }
 .youtube__video {
     max-width: 100%;
@@ -273,7 +276,7 @@ body {
     flex-direction: column;
     max-width: 59.5vw;
     margin-right: auto;
-    margin-left: .95rem;
+    /*margin-left: .95rem;*/
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
