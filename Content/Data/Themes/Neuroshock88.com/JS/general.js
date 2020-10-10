@@ -3,7 +3,7 @@ if (window.location.href.includes("/Default/Index")) {
     window.location.href = "/";
 }
 setTimeout(function () {
-    document.getElementById("twoseven-ext-tab-media-modal").parentElement.style.display = "none";
+    document.querySelector(".header__mobile-nav-list-container").classList.add("header__mobile-nav-list-container--closed");
 }, 500);
 
 var ogScrollPosition = 0;
@@ -15,8 +15,12 @@ function ToggleHeaderButtonState(x) {
             document.querySelector(".header__mobile-nav-list-container").style.opacity = 1;
             document.querySelector("body").style.overflow = "hidden";
             document.querySelector(".header__mobile-nav-list-container").style.top = window.scrollY + "px";
+            document.querySelector(".header__mobile-nav-list-container").classList.add("header__mobile-nav-list-container--open");
+            document.querySelector(".header__mobile-nav-list-container").classList.remove("header__mobile-nav-list-container--closed");
         } else {
             document.querySelector(".header__mobile-nav-list-container").style.opacity = 0;
+            document.querySelector(".header__mobile-nav-list-container").classList.add("header__mobile-nav-list-container--closed");
+            document.querySelector(".header__mobile-nav-list-container").classList.remove("header__mobile-nav-list-container--open");
             document.querySelector("body").style.overflow = "";
         }
     }

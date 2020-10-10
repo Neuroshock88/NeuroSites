@@ -10,6 +10,7 @@ using NeuroSites.Models;
 using System.Runtime.Remoting.Messaging;
 using Microsoft.CSharp;
 using System.CodeDom.Compiler;
+using System.Net;
 
 
 namespace NeuroSites.Controllers
@@ -18,6 +19,34 @@ namespace NeuroSites.Controllers
     {
         public ActionResult Index()
         {
+            if (Classes.StaticFunctions.IsDevDomain())
+            {
+                Classes.StaticFunctions.Website = "Neuroshock88.com";
+            }
+            else
+            {
+                if (HttpContext.Request != null)
+                {
+                    string[] themes = Directory.GetDirectories(Server.MapPath("~/Content/Data/Themes/"));
+                    if (themes != null)
+                    {
+                        foreach (string theme in themes)
+                        {
+                            string[] splitter = theme.Split('\\');
+                            string folderName = splitter[splitter.Length - 1];
+                            if (HttpContext.Request.Url.Host.ToLower().IndexOf(folderName.ToLower()) >= 0)
+                            {
+                                Classes.StaticFunctions.Website = folderName;
+                                break;
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                    }
+                }
+            }
             string area = "";
             string url = System.Web.HttpContext.Current.Request.RawUrl.Replace("http://", "").Replace("https://", "").Replace("Default/Index", "");
 
@@ -26,7 +55,13 @@ namespace NeuroSites.Controllers
             if (hasSlug == false)
             {
                 //load the home page template
-                json = new StreamReader(Server.MapPath("/Content/PageTemplates/home.json")).ReadToEnd();
+                if (Classes.StaticFunctions.Website != null)
+                {
+                    if (!string.IsNullOrEmpty(Classes.StaticFunctions.Website))
+                    { 
+                        json = new StreamReader(Server.MapPath("/Content/Data/Themes/" + Classes.StaticFunctions.Website + "/Pages/home.json")).ReadToEnd();
+                    }
+                }
             }
             else
             {

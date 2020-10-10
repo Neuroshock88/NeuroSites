@@ -141,6 +141,7 @@
     <Compile Include="Areas\YouTube\PropertiesModel.cs" />
     <Compile Include="Areas\Masthead\Default.cs" />
     <Compile Include="Areas\Masthead\PropertiesModel.cs" />
+    <Compile Include="Classes\StaticFunctions.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -165,11 +166,11 @@
     <Content Include="Content\Images\Logos\twitter-logo-2-1.png" />
     <Content Include="Content\Images\Logos\twitter-logo.png" />
     <Content Include="Content\Images\Logos\youtube_64dp.png" />
-    <Content Include="Content\js\general.js" />
+    <Content Include="Content\Data\Themes\Neuroshock88.com\JS\general.js" />
     <Content Include="Content\Images\img\youtube bannerV3.png" />
     <Content Include="Content\Images\Logos\4k icon.png" />
-    <Content Include="Content\PageTemplates\home.json" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\Data\Themes\Neuroshock88.com\Pages\home.json" />
+    <Content Include="Content\Data\Themes\Neuroshock88.com\CSS\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="App_Data\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -197,6 +198,8 @@
     <Folder Include="Areas\Merchandise\Views\Shared\" />
     <Folder Include="Areas\Twitch\Views\Shared\" />
     <Folder Include="Areas\YouTube\Views\Shared\" />
+    <Folder Include="Content\js\" />
+    <Folder Include="Content\PageTemplates\" />
     <Folder Include="Content\Videos\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
@@ -218,7 +221,7 @@
     <Content Include="App_Data\fonts\Pixeboy-z8XGD.ttf" />
     <Content Include="Areas\Merch\Views\Index.cshtml" />
     <Content Include="Areas\Merch\Views\web.config" />
-    <Content Include="Content\PageTemplates\merch.json" />
+    <Content Include="Content\Data\Themes\Neuroshock88.com\Pages\merch.json" />
     <Content Include="Areas\Merchandise\Views\Index.cshtml" />
     <Content Include="Areas\Merchandise\Views\web.config" />
     <Content Include="Areas\Twitch\Views\Index.cshtml" />

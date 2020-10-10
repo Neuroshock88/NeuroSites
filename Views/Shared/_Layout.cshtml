@@ -5,8 +5,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeuroShock88</title>
-    @Styles.Render("~/Content/Site.css")
-    @Scripts.Render("~/Content/js/general.js")
+    @{
+        if (HttpContext.Current.Request.Url.Host.ToLower().IndexOf("localhost") >= 0)
+        {
+            @Styles.Render("~/Content/Data/Themes/Neuroshock88.com/CSS/Site.css");
+            @Scripts.Render("~/Content/Data/Themes/Neuroshock88.com/JS/general.js");
+            NeuroSites.Classes.StaticFunctions.Website = "Neuroshock88.com";
+        }
+        else
+        {
+            if (HttpContext.Current != null)
+            {
+                string[] themes = Directory.GetDirectories(Server.MapPath("~/Content/Data/Themes/"));
+                if (themes != null)
+                {
+                    foreach (string theme in themes)
+                    {
+                        string[] splitter = theme.Split('\\');
+                        NeuroSites.Classes.StaticFunctions.Website = splitter[splitter.Length - 1];
+                        if (HttpContext.Current.Request.Url.Host.ToLower().IndexOf(NeuroSites.Classes.StaticFunctions.Website.ToLower()) >= 0)
+                        {
+                            Styles.Render("~/Content/Data/Themes/" + NeuroSites.Classes.StaticFunctions.Website + "/CSS/Site.css");
+                            Scripts.Render("~/Content/Data/Themes/" + NeuroSites.Classes.StaticFunctions.Website + "/JS/general.js");
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
 </head>
 <body>
     @RenderBody()
