@@ -6,29 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeuroShock88</title>
     @{
-        if (HttpContext.Current.Request.Url.Host.ToLower().IndexOf("localhost") >= 0)
+        if (NeuroSites.Classes.StaticFunctions.IsDevDomain())
         {
-            @Styles.Render("~/Content/Data/Themes/Neuroshock88.com/CSS/Site.css");
-            @Scripts.Render("~/Content/Data/Themes/Neuroshock88.com/JS/general.js");
-            NeuroSites.Classes.StaticFunctions.Website = "Neuroshock88.com";
+            NeuroSites.Classes.StaticFunctions.Website = "";
         }
-        else
+        if (HttpContext.Current != null)
         {
-            if (HttpContext.Current != null)
+            string[] themes = Directory.GetDirectories(Server.MapPath("~/Content/Data/Themes/"));
+            if (themes != null)
             {
-                string[] themes = Directory.GetDirectories(Server.MapPath("~/Content/Data/Themes/"));
-                if (themes != null)
+                foreach (string theme in themes)
                 {
-                    foreach (string theme in themes)
+                    string[] splitter = theme.Split('\\');
+                    NeuroSites.Classes.StaticFunctions.Website = splitter[splitter.Length - 1];
+                    if (HttpContext.Current.Request.Url.Host.ToLower().IndexOf(NeuroSites.Classes.StaticFunctions.Website.ToLower()) >= 0)
                     {
-                        string[] splitter = theme.Split('\\');
-                        NeuroSites.Classes.StaticFunctions.Website = splitter[splitter.Length - 1];
-                        if (HttpContext.Current.Request.Url.Host.ToLower().IndexOf(NeuroSites.Classes.StaticFunctions.Website.ToLower()) >= 0)
-                        {
-                            Styles.Render("~/Content/Data/Themes/" + NeuroSites.Classes.StaticFunctions.Website + "/CSS/Site.css");
-                            Scripts.Render("~/Content/Data/Themes/" + NeuroSites.Classes.StaticFunctions.Website + "/JS/general.js");
-                            break;
-                        }
+                        @Styles.Render("~/Content/Data/Themes/" + NeuroSites.Classes.StaticFunctions.Website + "/CSS/Site.css");
+                        @Scripts.Render("~/Content/Data/Themes/" + NeuroSites.Classes.StaticFunctions.Website + "/JS/general.js");
+                        break;
+                    }
+                    else if (HttpContext.Current.Request.Url.Host.IndexOf("localhost") >= 0) 
+                    {
+                        @Styles.Render("~/Content/Data/Themes/neuroshock88.com/CSS/Site.css");
+                        @Scripts.Render("~/Content/Data/Themes/neuroshock88/JS/general.js");
+                        break;
                     }
                 }
             }

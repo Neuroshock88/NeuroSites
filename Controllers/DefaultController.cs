@@ -21,7 +21,7 @@ namespace NeuroSites.Controllers
         {
             if (Classes.StaticFunctions.IsDevDomain())
             {
-                Classes.StaticFunctions.Website = "Neuroshock88.com";
+                Classes.StaticFunctions.Website = "neuroshock88.com";
             }
             else
             {

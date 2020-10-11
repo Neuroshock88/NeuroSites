@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,17 +52,15 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -105,6 +104,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -154,6 +154,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\img\Neuroshock88 Banner BG ONLY 1440p.png" />
+    <Content Include="Content\Images\img\Neuroshock88 Banner LOGO ONLY 1440p.png" />
     <Content Include="Content\Images\Logos\discord.png" />
     <Content Include="Content\Images\img\Neuroshock88 Youtube Banner v3 1440p v2.jpg" />
     <Content Include="Content\Images\Logos\elegant-youtube-logo-12.png" />
@@ -166,26 +168,27 @@
     <Content Include="Content\Images\Logos\twitter-logo-2-1.png" />
     <Content Include="Content\Images\Logos\twitter-logo.png" />
     <Content Include="Content\Images\Logos\youtube_64dp.png" />
-    <Content Include="Content\Data\Themes\Neuroshock88.com\JS\general.js" />
+    <Content Include="Content\Data\Themes\neuroshock88.com\JS\general.js" />
     <Content Include="Content\Images\img\youtube bannerV3.png" />
     <Content Include="Content\Images\Logos\4k icon.png" />
-    <Content Include="Content\Data\Themes\Neuroshock88.com\Pages\home.json" />
-    <Content Include="Content\Data\Themes\Neuroshock88.com\CSS\Site.css" />
+    <Content Include="Content\Data\Themes\neuroshock88.com\Pages\home.json" />
+    <Content Include="Content\Data\Themes\neuroshock88.com\CSS\Site.css" />
+    <Content Include="Content\Images\Logos\youtube_logo_white.png" />
     <Content Include="favicon.ico" />
     <Content Include="App_Data\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="App_Data\css\Site.css" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Shared\" />
@@ -221,7 +224,7 @@
     <Content Include="App_Data\fonts\Pixeboy-z8XGD.ttf" />
     <Content Include="Areas\Merch\Views\Index.cshtml" />
     <Content Include="Areas\Merch\Views\web.config" />
-    <Content Include="Content\Data\Themes\Neuroshock88.com\Pages\merch.json" />
+    <Content Include="Content\Data\Themes\neuroshock88.com\Pages\merch.json" />
     <Content Include="Areas\Merchandise\Views\Index.cshtml" />
     <Content Include="Areas\Merchandise\Views\web.config" />
     <Content Include="Areas\Twitch\Views\Index.cshtml" />
