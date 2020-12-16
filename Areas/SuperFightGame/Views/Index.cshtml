@@ -1,0 +1,72 @@
+﻿@model NeuroSites.Areas.SuperFightGame.Default
+@{
+    NeuroSites.Areas.SuperFightGame.Default NewModel = NeuroSites.Models.PagesModel.ActiveModel;
+}
+@if (NewModel != null)
+{
+    <div class="SuperFightGame" id="superfight">
+        <!--the game turn order is make it take it-->
+        @if (NewModel.properties.TheGame.HasStarted)
+        {
+            <div class="topbanner">
+                <div class="AdminStuffs"></div>
+                <div class="deckscontainer">
+                    <div class="whiteDeck"></div>
+                    <div class="blackDeck"></div>
+                </div>
+                <div class="winnerstats"></div>
+            </div>
+            <div class="theboard">
+                <table>
+                    <tr>
+                        <td class="section1">
+                            <div>
+
+                            </div>
+                        </td>
+                        <td rowspan="2">
+                            <ul class="playerlist">
+                                <li>
+                                    <div class="playername">
+
+                                    </div>
+                                    <div class="playerscore">
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="section2">
+                            <div>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        }
+        else
+        {
+            <h1>WELCOME <br/>to<br/>SUPER FIGHT GAME!!!</h1>
+        <div class="main-menu">
+            <div class="row">
+                @* Add New go here *@
+                <div class="newplayer">
+                    <span><input type="text" name="newPlayerName" class="Input"/></span>
+                    <span><button class="btn">Add New Player</button></span>
+                </div>
+                <button name="startGame">Start Game!</button>
+            </div>
+            <div class="row">
+                @* Players Go Here *@
+                <ul class="playerlist">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        }
+    </div>
+
+}

@@ -70,12 +70,18 @@ namespace NeuroSites.Controllers
                 {
                     if (url.IndexOf("/") + 2 < url.Length)
                     {
-                        area = url.Replace("/", "");
+                        area = url.Replace("https://www." + Classes.StaticFunctions.Website + "/", "");
+                        area = area.Trim('/');
+                        if(area.IndexOf("/") > 0)
+                        {
+                            //this is if we have more than one folder  path
+                            area = area.Substring(0, area.IndexOf("/"));
+                        }
                         if (!string.IsNullOrEmpty(area))
                         {
-                            if(System.IO.File.Exists(Server.MapPath("/Content/PageTemplates/" + area + ".json")))
+                            if(System.IO.File.Exists(Server.MapPath("/Content/Data/Themes/" + Classes.StaticFunctions.Website + "/Pages/" + area + ".json")))
                             {
-                                json = new StreamReader(Server.MapPath("/Content/PageTemplates/" + area + ".json")).ReadToEnd();
+                                json = new StreamReader(Server.MapPath("/Content/Data/Themes/" + Classes.StaticFunctions.Website + "/Pages/" + area + ".json")).ReadToEnd();
                             }
                         }
                     }

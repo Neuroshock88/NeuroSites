@@ -123,6 +123,11 @@
     <Compile Include="Areas\Admin\PropertiesModel.cs" />
     <Compile Include="Areas\Affiliation\Default.cs" />
     <Compile Include="Areas\Affiliation\PropertiesModel.cs" />
+    <Compile Include="Areas\SuperFightGame\GameModel.cs" />
+    <Compile Include="Areas\SuperFightGame\Default.cs" />
+    <Compile Include="Areas\SuperFightGame\CardModel.cs" />
+    <Compile Include="Areas\SuperFightGame\PlayerModel.cs" />
+    <Compile Include="Areas\SuperFightGame\PropertiesModel.cs" />
     <Compile Include="Areas\Generic\Default.cs" />
     <Compile Include="Areas\Generic\PropertiesModel.cs" />
     <Compile Include="Areas\Footer\Default.cs" />
@@ -174,6 +179,10 @@
     <Content Include="Content\Data\Themes\neuroshock88.com\Pages\home.json" />
     <Content Include="Content\Data\Themes\neuroshock88.com\CSS\Site.css" />
     <Content Include="Content\Images\Logos\youtube_logo_white.png" />
+    <Content Include="Content\Data\Themes\neuroshock88.com\JS\SuperMonsterGame.js" />
+    <Content Include="Content\SuperFightGame\BlackDeck.txt" />
+    <None Include="Content\SuperFightGame\currentGame.json" />
+    <Content Include="Content\SuperFightGame\WhiteDeck.txt" />
     <Content Include="favicon.ico" />
     <Content Include="App_Data\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -183,6 +192,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Web.config" />
+    <Content Include="Areas\SuperFightGame\Views\Index.cshtml" />
+    <Content Include="Areas\SuperFightGame\Views\web.config" />
+    <Content Include="Content\Data\Themes\neuroshock88.com\Pages\supergamefight.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -199,6 +211,7 @@
     <Folder Include="Areas\Header\Views\Shared\" />
     <Folder Include="Areas\Masthead\Views\Shared\" />
     <Folder Include="Areas\Merchandise\Views\Shared\" />
+    <Folder Include="Areas\SuperFightGame\Views\Shared\" />
     <Folder Include="Areas\Twitch\Views\Shared\" />
     <Folder Include="Areas\YouTube\Views\Shared\" />
     <Folder Include="Content\js\" />
