@@ -159,6 +159,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Data\Themes\neuroshock88.com\CSS\SuperMonsterGame.css" />
     <Content Include="Content\Images\img\Neuroshock88 Banner BG ONLY 1440p.png" />
     <Content Include="Content\Images\img\Neuroshock88 Banner LOGO ONLY 1440p.png" />
     <Content Include="Content\Images\Logos\discord.png" />
