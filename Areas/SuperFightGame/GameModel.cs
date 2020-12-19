@@ -14,5 +14,6 @@ namespace NeuroSites.Areas.SuperFightGame
         public bool HasStarted { get; set; }
         public List<CardModel> WhiteDeck { get; set; }
         public List<CardModel> BlackDeck { get; set; }
+        public List<PlayerModel> Players;
     }
 }

@@ -1,18 +1,1 @@
-﻿[
-	{
-		"Players": [
-			{
-				"Name": "",
-				"Score": 0
-			},
-			{
-				"Name": "",
-				"Score": 0
-			},
-			{
-				"Name": "",
-				"Score": 0
-			}
-		]
-	}
-]
+[{"PlayerName":"1","PlayerID":null,"PlayerScore":0,"PlayerHand":null},{"PlayerName":"2","PlayerID":null,"PlayerScore":0,"PlayerHand":null},{"PlayerName":"3","PlayerID":null,"PlayerScore":0,"PlayerHand":null}]

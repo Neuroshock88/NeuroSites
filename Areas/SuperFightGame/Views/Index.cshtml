@@ -5,7 +5,7 @@
 @if (NewModel != null)
 {
     <link rel="stylesheet" href="~/Content/Data/Themes/neuroshock88.com/CSS/SuperMonsterGame.css" />
-
+    <script src="~/Content/Data/Themes/neuroshock88.com/JS/SuperMonsterGame.js"></script>
     <div class="SuperFightGame" id="superfight">
         <!--the game turn order is make it take it-->
         @if (NewModel.properties.TheGame.HasStarted)
@@ -51,12 +51,13 @@
         }
         else
         {
-            <h1 style="text-align:center; color: white;">WELCOME <br/>to<br/>SUPER FIGHT GAME!!!</h1>
+            <h1 style="text-align:center; color: white;">WELCOME <br />to<br />SUPER FIGHT GAME!!!</h1>
+            <div style="text-align:center; width: 100%; color: white;"><button class="btn" name="newGame">Start New Game</button><br/>Clicking this will remove all players and start over</div>
             <div class="main-menu">
                 <div class="row">
                     @* Add New go here *@
                     <div class="newplayer">
-                        <span><input type="text" name="newPlayerName" class="Input"/></span>
+                        <span><input type="text" name="newPlayerName" class="Input" /></span>
                         <span><button class="btn" name="addNewPlayer">Add New Player</button></span>
                     </div>
                     <button name="startGame">Start Game!</button>
@@ -65,7 +66,6 @@
                     @* Players Go Here *@
                     <h2 style="text-align:center;">Waiting Room</h2>
                     <ul class="playerlist">
-                        <li></li>
                     </ul>
                 </div>
             </div>

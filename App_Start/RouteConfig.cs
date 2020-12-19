@@ -14,10 +14,10 @@ namespace NeuroSites
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                "Admin",                                              // Route name
-                "Admin/",                           // URL with parameters
-                new { controller = "Admin", action = "Index", id = "" }  // Parameter defaults
-                );
+                "Ajax",                                              // Route name
+                "Ajax/{action}/{id}",
+                defaults: new { controller = "Ajax", action = "{action}", id = UrlParameter.Optional }
+            );
 
             routes.MapRoute(
                 "Default",                                              // Route name

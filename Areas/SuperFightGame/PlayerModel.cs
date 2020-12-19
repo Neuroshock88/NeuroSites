@@ -11,6 +11,7 @@ namespace NeuroSites.Areas.SuperFightGame
         /// sets the Merch website URL
         /// </summary>
         public string PlayerName { get; set; }
+        public string PlayerID { get; set; }
         public int PlayerScore { get; set; }
         public List<CardModel> PlayerHand { get; set; }
     }
